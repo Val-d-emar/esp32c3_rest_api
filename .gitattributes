@@ -1,0 +1,46 @@
+# This file is used to ignore files which are generated
+# ----------------------------------------------------------------------------
+# Handle line endings automatically for files detected as text 
+# and leave all files detected as binary untouched.
+* text=auto
+
+# Never modify line endings of our bash scripts
+#
+*.sh text eol=lf
+*.cmd text eol=cr
+*.bat text eol=cr
+
+# Enforce LF for all text files, especially .ts files
+*.ts text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.md text eol=lf
+
+*.tf text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.py text eol=lf
+*.go text eol=lf
+
+*.xml text eol=lf
+
+# The above will handle all files NOT found below
+#
+# These files are text and should be normalized (Convert crlf => lf)
+*.java          text
+*.properties    text
+*.txt           text
+# for Qt
+*.cpp           text
+*.h             text
+*.ui            text
+*.pro           text
+# These files are binary and should be left untouched
+# (binary is macro for -text -diff)
+*.class         binary
+*.jar           binary
+*.gif           binary
+*.jpg           binary
+*.png           binary
