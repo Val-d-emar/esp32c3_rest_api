@@ -3,5 +3,5 @@
 if [ -f .env ]; then
     # Экспортируем только не закомментированные строки
     export $(grep -v '^#' .env | xargs)
-    echo "-DWIFI_SSID=\"$WIFI_SSID\" -DWIFI_PASS=\"$WIFI_PASS\""
+    echo "-DWIFI_SSID=\"$WIFI_SSID\" -DWIFI_PASS=\"$WIFI_PASS\" -DPORT=\"$PORT\" -DENDPOINT=\"$ENDPOINT\""
 fi
